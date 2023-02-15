@@ -16,13 +16,12 @@ public class FileReader {
                 String[] keyValue = currentLine.split(": ");
                 data.put(keyValue[0].toLowerCase(), keyValue[1]);
             }
-            Profile profile = new Profile(
+            return new Profile(
                     data.get("name"),
                     Integer.parseInt(data.get("age")),
                     data.get("email"),
                     Long.parseLong(data.get("phone"))
             );
-            return profile;
         } catch (IOException e) {
             return new Profile();
         }
