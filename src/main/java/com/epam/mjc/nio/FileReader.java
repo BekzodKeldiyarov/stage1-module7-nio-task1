@@ -16,7 +16,6 @@ public class FileReader {
                 String[] keyValue = currentLine.split(": ");
                 data.put(keyValue[0].toLowerCase(), keyValue[1]);
             }
-            System.out.println(data);
             Profile profile = new Profile(
                     data.get("name"),
                     Integer.parseInt(data.get("age")),
